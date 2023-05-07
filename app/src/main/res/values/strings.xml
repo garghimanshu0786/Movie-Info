@@ -3,5 +3,14 @@
     <string name="rating">Rating</string>
     <string name="no_access">No Access to feature</string>
     <string name="unauthorized">Unauthorized</string>
-    <string name="playlist">Playlist</string>
+    <string name="click_to_add_to_playlist">Click to add to playlist</string>
+    <string name="click_to_see_playlists">Click to see playlists</string>
+    <string name="add_a_playlist">Add a playlist</string>
+    <string name="enter_a_playlist_name">Enter a playlist name</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="click_to_filter_by_playlist">Click to filter by playlists</string>
+    <string name="no_playlist_exists">No Playlist Exists</string>
+    <string name="clear_filter">Clear filter</string>
+    <string name="remove">Remove</string>
 </resources>

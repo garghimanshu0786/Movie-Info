@@ -1,7 +1,7 @@
-package com.himanshu.movieinfo.base.utilities
+package com.himanshu.movieinfo.features.presentation.utilities
 
+import com.himanshu.movieinfo.features.domain.entities.ResultEntity
 import com.himanshu.movieinfo.features.presentation.models.APIExceptionEvent
-import com.himanshu.movieinfo.features.domain.entity.ResultEntity
 import kotlinx.coroutines.flow.MutableSharedFlow
 
 suspend fun handleException(

@@ -1,22 +1,31 @@
 package com.himanshu.movieinfo.features.presentation.mapper
 
-import com.himanshu.movieinfo.features.domain.entity.MoviesEntity
-import com.himanshu.movieinfo.features.domain.entity.ResultsEntity
+import com.himanshu.movieinfo.features.domain.entities.Movie
+import com.himanshu.movieinfo.features.domain.entities.MoviesEntity
 import com.himanshu.movieinfo.features.presentation.state.MovieViewData
 import javax.inject.Inject
 
 class MovieViewDataMapper @Inject constructor() {
 	fun mapMoviesEntityToViewData(entity: MoviesEntity?): List<MovieViewData> {
-		return entity?.results?.map { mapResultEntityToViewData(it) } ?: emptyList()
+		return entity?.movies?.map { mapResultEntityToViewData(it) } ?: emptyList()
 	}
 
-	private fun mapResultEntityToViewData(entity: ResultsEntity): MovieViewData {
+	private fun mapResultEntityToViewData(movie: Movie): MovieViewData {
 		return MovieViewData(
-			name = entity.title ?: "",
-			rating = entity.voteAverage.toString(),
-			image = entity.posterPath ?: "",
-			playlists = emptyList()
+			id = movie.id,
+			name = movie.title ?: "",
+			rating = movie.voteAverage.toString(),
+			image = movie.posterPath ?: "",
+			playlists = movie.playlists
 		)
 	}
+
+	fun mapViewDataToMoviesEntity(movies: List<MovieViewData>) = MoviesEntity(movies.map {
+		with(it) {
+			Movie(
+				id = id, posterPath = image, title = name, voteAverage = rating.toFloat(), playlists
+			)
+		}
+	})
 
 }

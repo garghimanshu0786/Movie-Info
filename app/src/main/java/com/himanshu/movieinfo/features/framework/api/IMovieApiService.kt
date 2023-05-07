@@ -1,7 +1,7 @@
 package com.himanshu.movieinfo.features.framework.api
 
 import com.himanshu.movieinfo.features.framework.Constants.API_KEY
-import com.himanshu.movieinfo.features.framework.network.models.remoteentities.MoviesResponse
+import com.himanshu.movieinfo.features.framework.models.remoteentities.MoviesResponse
 import retrofit2.Response
 import retrofit2.http.GET
 

@@ -1,6 +1,7 @@
 package com.himanshu.movieinfo.features.presentation.ui.components
 
 import androidx.compose.material.ScaffoldState
+import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
@@ -9,10 +10,8 @@ import com.himanshu.movieinfo.features.presentation.models.APIExceptionEvent
 import kotlinx.coroutines.flow.SharedFlow
 
 @Composable
-fun HandleAPIException(
-	apiExceptionEvent: SharedFlow<APIExceptionEvent>,
-	scaffoldState: ScaffoldState,
-) {
+fun HandleAPIException(apiExceptionEvent: SharedFlow<APIExceptionEvent>) {
+	val scaffoldState: ScaffoldState = rememberScaffoldState()
 	val context = LocalContext.current
 	LaunchedEffect(Unit) {
 		apiExceptionEvent.collect { event ->

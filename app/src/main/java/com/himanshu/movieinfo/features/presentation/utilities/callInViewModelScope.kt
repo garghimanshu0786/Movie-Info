@@ -1,4 +1,4 @@
-package com.himanshu.movieinfo.base.utilities
+package com.himanshu.movieinfo.features.presentation.utilities
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

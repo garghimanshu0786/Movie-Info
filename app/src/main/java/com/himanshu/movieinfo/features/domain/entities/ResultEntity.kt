@@ -1,4 +1,4 @@
-package com.himanshu.movieinfo.features.domain.entity
+package com.himanshu.movieinfo.features.domain.entities
 
 
 sealed class ResultEntity<out R> {

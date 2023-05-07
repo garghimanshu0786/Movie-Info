@@ -16,7 +16,7 @@ fun MovieImage(imagePath: String) {
 		imageModel = { imagePath },
 		Modifier
 			.fillMaxWidth()
-			.height(160.dp),
+			.height(500.dp),
 		imageOptions = ImageOptions(
 			contentScale = ContentScale.Crop, alignment = Alignment.Center
 		)

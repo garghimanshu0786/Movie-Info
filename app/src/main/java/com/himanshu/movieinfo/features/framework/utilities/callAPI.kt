@@ -1,6 +1,6 @@
-package com.himanshu.movieinfo.base.utilities
+package com.himanshu.movieinfo.features.framework.utilities
 
-import com.himanshu.movieinfo.features.domain.entity.ResultEntity
+import com.himanshu.movieinfo.features.domain.entities.ResultEntity
 import retrofit2.Response
 
 suspend fun <D, C> callAPI(
